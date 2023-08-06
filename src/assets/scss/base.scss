@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
+@import './responsive.scss';
+
+
+:root {
+    // font
+    --font-family: 'Ubuntu', sans-serif;
+    --font-regular: 400;
+    --font-semibold: 500;
+    --font-bold: 700;
+    --font-line: 1.8;
+    --font-size: 16px;
+
+    // layout
+    --mobile: 375px;
+    --tablet: 720px;
+    --desktop: 1120px;
+    --side: 5vw;
+    --side-double: calc(var(--side) * 2);
+    // --endpoint: 2.8rem;
+    // --angles-block: 7px;
+    --body-side: max(var(--side), calc(50% - var(--mobile) / 2));
+
+    // @media #{$mobileScreen} {
+    //     --body-side: min(var(--side), calc(50% - var(--mobile) / 2));
+    // }
+
+    // @media #{$desktopScreen} {
+    //     --body-side: max(var(--side), calc(50% - var(--desktop) / 2));
+    // }
+
+    // colors
+    --font-color: var(--marine-blue);
+    --main-background: var(--magnolia);
+
+    --marine-blue: rgb(2, 41, 90);
+    --purplish-blue: rgb(71, 61, 255);
+    --pastel-blue: rgb(173, 190, 255);
+    --light-blue: rgb(191, 226, 253);
+    --strawberry-red: rgb(237, 53, 72);
+
+    --cool-gray: rgb(150, 153, 171);
+    --light-gray: rgb(214, 217, 230);
+    --magnolia: rgb(240, 246, 255);
+    --alabaster: rgb(250, 251, 255);
+    --white: rgb(255, 255, 255);
+}
+
+// style reset
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    outline: transparent !important;
+    text-decoration: none;
+}
