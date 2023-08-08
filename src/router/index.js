@@ -1,18 +1,18 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import Yourinfo from '../views/Yourinfo.vue'
+import YourInfo from '../views/YourInfo.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
-      path: '/yourinfo',
+      path: '/your-info',
       name: 'yourinfo',
-      component: Yourinfo
+      component: YourInfo
     },
     {
-      path: '/selectplan',
+      path: '/select-plan',
       name: 'selectplan',
-      component: () => import('../views/Selectplan.vue')
+      component: () => import('../views/SelectPlan.vue')
     },
     {
       path: '/addons',

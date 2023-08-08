@@ -15,23 +15,29 @@
     --mobile: 375px;
     --tablet: 720px;
     --desktop: 1120px;
+    --side-desktop: 1rem;
     --side: 5vw;
     --side-double: calc(var(--side) * 2);
+    --corner: 12px;
+    --corner-button: 5px;
     // --endpoint: 2.8rem;
-    // --angles-block: 7px;
     --body-side: max(var(--side), calc(50% - var(--mobile) / 2));
 
-    // @media #{$mobileScreen} {
-    //     --body-side: min(var(--side), calc(50% - var(--mobile) / 2));
-    // }
+    @media #{$tabletScreen} {
+        --body-side: max(var(--side), calc(50% - var(--desktop) / 2));
+    }
 
     // @media #{$desktopScreen} {
     //     --body-side: max(var(--side), calc(50% - var(--desktop) / 2));
     // }
 
     // colors
-    --font-color: var(--marine-blue);
+    --font-color-dark: var(--marine-blue);
+    --font-color-text: var(--cool-gray);
+    --font-color-light: var(--white);
+    --step-color: var(--light-blue);
     --main-background: var(--magnolia);
+    --second-background: var(--alabaster);
 
     --marine-blue: rgb(2, 41, 90);
     --purplish-blue: rgb(71, 61, 255);

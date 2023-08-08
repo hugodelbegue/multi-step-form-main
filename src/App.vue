@@ -1,50 +1,108 @@
 <script setup>
-import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
+import { RouterView } from 'vue-router'
+import Navbar from './components/Navbar.vue'
+import SwitchStep from './components/SwitchStep.vue'
 </script>
 
 <template>
-  <header>
-    <div class="wrapper_header size">
-      <HelloWorld msg="You did it!" />
+  <div class="wrapper">
+    <header>
+      <div class="wrapper_header size">
+        <Navbar />
+      </div>
+    </header>
 
-      <nav>
-        <RouterLink to="/yourinfo">1</RouterLink>
-        <RouterLink to="/selectplan">2</RouterLink>
-        <RouterLink to="/addons">3</RouterLink>
-        <RouterLink to="/summary">4</RouterLink>
-      </nav>
-    </div>
-  </header>
-
-  <main>
-    <div class="wrapper_main size">
-      <RouterView class="interface" />
-    </div>
-  </main>
-
-  <footer>
-    <div class="wrapper_footer size">
-      FOOTER
-    </div>
-  </footer>
+    <main>
+      <div class="wrapper_main">
+        <div class="wrapper_interface size">
+          <RouterView class="interface" />
+        </div>
+        <div class="wrapper_switchStep size">
+          <SwitchStep />
+        </div>
+      </div>
+    </main>
+  </div>
 </template>
 
 <style lang="scss" scoped>
+.wrapper {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  place-content: space-between;
+
+  @media #{$tabletScreen} {
+    background-color: var(--second-background);
+    height: auto;
+    flex-direction: row;
+    margin: auto;
+    padding: var(--side-desktop);
+    border-radius: var(--corner);
+    box-shadow: 0 10px 15px -10px var(--light-gray);
+  }
+}
+
 .wrapper_header {
   background-image: url(./assets/images/bg-sidebar-mobile.svg);
   background-size: cover;
+  background-repeat: no-repeat;
+
+  @media #{$tabletScreen} {
+    height: 100%;
+    background-image: url(./assets/images/bg-sidebar-desktop.svg);
+    background-size: contain;
+  }
 }
 
 .wrapper_main {
-  background-color: red;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  place-content: space-between;
+
+  @media #{$tabletScreen} {
+    padding-top: calc(var(--side-desktop) * 2);
+    padding-bottom: var(--side-desktop);
+    padding-left: var(--side);
+    padding-right: calc(var(--side) - var(--side-desktop));
+  }
+}
+
+.wrapper_interface {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+
+  @media #{$tabletScreen} {
+    position: initial;
+    transform: none;
+  }
 }
 
 .interface {
-  background: blueviolet;
+  background-color: var(--second-background);
+  border-radius: var(--corner);
+  padding: 2rem 1.5rem;
+  box-shadow: 0 10px 15px -10px var(--light-gray);
+
+  @media #{$tabletScreen} {
+    padding: 0;
+    box-shadow: none;
+  }
 }
 
-.wrapper_footer {
-  background-color: aqua;
+.wrapper_switchStep {
+  background-color: var(--second-background);
+  padding: var(--side);
+  display: flex;
+  place-content: space-between;
+  place-items: center;
+  box-shadow: 0 -5px 10px -10px var(--light-gray);
+
+  @media #{$tabletScreen} {
+    padding: 0;
+    box-shadow: none;
+  }
 }
 </style>
