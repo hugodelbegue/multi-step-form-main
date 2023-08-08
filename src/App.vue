@@ -7,7 +7,7 @@ import SwitchStep from './components/SwitchStep.vue'
 <template>
   <div class="wrapper">
     <header>
-      <div class="wrapper_header size">
+      <div class="wrapper_sidebar size">
         <Navbar />
       </div>
     </header>
@@ -39,19 +39,27 @@ import SwitchStep from './components/SwitchStep.vue'
     margin: auto;
     padding: var(--side-desktop);
     border-radius: var(--corner);
-    box-shadow: 0 10px 15px -10px var(--light-gray);
+    box-shadow: 0 10px 15px -10px var(--shadow-color);
   }
 }
 
-.wrapper_header {
+.wrapper_sidebar {
   background-image: url(./assets/images/bg-sidebar-mobile.svg);
   background-size: cover;
   background-repeat: no-repeat;
+  padding: var(--side-desktop-double);
+
 
   @media #{$tabletScreen} {
-    height: 100%;
+    height: 568px;
+    width: 274px;
     background-image: url(./assets/images/bg-sidebar-desktop.svg);
-    background-size: contain;
+    background-color: var(--second-background);
+    background-size: auto;
+
+    svg {
+      width: auto;
+    }
   }
 }
 
@@ -70,6 +78,7 @@ import SwitchStep from './components/SwitchStep.vue'
 }
 
 .wrapper_interface {
+  // TODO: gérer le responsive de l'interface en dessous de 375px
   position: absolute;
   top: 50%;
   transform: translate(0, -50%);
@@ -84,7 +93,7 @@ import SwitchStep from './components/SwitchStep.vue'
   background-color: var(--second-background);
   border-radius: var(--corner);
   padding: 2rem 1.5rem;
-  box-shadow: 0 10px 15px -10px var(--light-gray);
+  box-shadow: 0 10px 15px -10px var(--shadow-color);
 
   @media #{$tabletScreen} {
     padding: 0;
@@ -98,7 +107,7 @@ import SwitchStep from './components/SwitchStep.vue'
   display: flex;
   place-content: space-between;
   place-items: center;
-  box-shadow: 0 -5px 10px -10px var(--light-gray);
+  box-shadow: 0 -5px 10px -10px var(--shadow-color);
 
   @media #{$tabletScreen} {
     padding: 0;

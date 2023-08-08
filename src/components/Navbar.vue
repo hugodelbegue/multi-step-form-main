@@ -5,10 +5,34 @@ import { RouterLink } from 'vue-router'
 <template>
     <nav>
         <div class="wrapper_nav">
-            <RouterLink to="/your-info">1</RouterLink>
-            <RouterLink to="/select-plan">2</RouterLink>
-            <RouterLink to="/addons">3</RouterLink>
-            <RouterLink to="/summary">4</RouterLink>
+            <div class="step">
+                <RouterLink to="/your-info">1</RouterLink>
+                <div class="step_description">
+                    <span class="step_number">step&nbsp;1</span>
+                    <span class="step_title">your&nbsp;info</span>
+                </div>
+            </div>
+            <div class="step">
+                <RouterLink to="/select-plan">2</RouterLink>
+                <div class="step_description">
+                    <span class="step_number">step&nbsp;2</span>
+                    <span class="step_title">select&nbsp;plan</span>
+                </div>
+            </div>
+            <div class="step">
+                <RouterLink to="/addons">3</RouterLink>
+                <div class="step_description">
+                    <span class="step_number">step&nbsp;3</span>
+                    <span class="step_title">add-ons</span>
+                </div>
+            </div>
+            <div class="step">
+                <RouterLink to="/summary">4</RouterLink>
+                <div class="step_description">
+                    <span class="step_number">step&nbsp;4</span>
+                    <span class="step_title">summary</span>
+                </div>
+            </div>
         </div>
     </nav>
 </template>
@@ -17,7 +41,7 @@ import { RouterLink } from 'vue-router'
 .wrapper_nav {
     display: flex;
     place-content: center;
-    gap: 1rem;
+    gap: var(--gap);
     padding-top: var(--side-double);
     padding-bottom: calc(var(--side-double) + 5rem);
 
@@ -38,6 +62,42 @@ import { RouterLink } from 'vue-router'
         height: auto;
         aspect-ratio: 1/1;
         border-radius: 50%;
+
+        @media #{$tabletScreen} {
+            font-size: .85em;
+        }
+    }
+
+    .step {
+        display: flex;
+        place-items: center;
+        gap: var(--gap);
+    }
+
+    .step_description {
+        display: none;
+
+        @media #{$tabletScreen} {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .step_number,
+        .step_title {
+            text-transform: uppercase;
+            line-height: 1.3;
+        }
+
+        .step_number {
+            color: var(--font-color-text);
+            font-size: .8em;
+            font-weight: var(--font-regular);
+        }
+
+        .step_title {
+            color: var(--font-color-light);
+            letter-spacing: 1px;
+        }
     }
 
     .router-link-active {

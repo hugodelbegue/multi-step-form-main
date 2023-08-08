@@ -23,6 +23,28 @@ body {
     }
 }
 
+.wrapper_interface_content {
+    display: flex;
+    flex-direction: column;
+    gap: .7rem;
+
+    @media #{$tabletScreen} {
+        gap: var(--gap);
+    }
+}
+
+.wrapper_interface_paragraph {
+    .title {
+        margin-bottom: .3em;
+        font-size: 1.9em;
+    }
+
+    .description {
+        color: var(--font-color-text);
+        font-size: 1.1em;
+    }
+}
+
 .size {
     padding-left: var(--body-side);
     padding-right: var(--body-side);

@@ -8,34 +8,33 @@
     --font-regular: 400;
     --font-semibold: 500;
     --font-bold: 700;
-    --font-line: 1.8;
+    --font-line: 1.5;
     --font-size: 16px;
 
     // layout
     --mobile: 375px;
     --tablet: 720px;
     --desktop: 1120px;
+    --gap: 1rem;
     --side-desktop: 1rem;
+    --side-desktop-double: calc(var(--side-desktop) * 2);
     --side: 5vw;
     --side-double: calc(var(--side) * 2);
     --corner: 12px;
     --corner-button: 5px;
-    // --endpoint: 2.8rem;
     --body-side: max(var(--side), calc(50% - var(--mobile) / 2));
 
     @media #{$tabletScreen} {
         --body-side: max(var(--side), calc(50% - var(--desktop) / 2));
     }
 
-    // @media #{$desktopScreen} {
-    //     --body-side: max(var(--side), calc(50% - var(--desktop) / 2));
-    // }
-
     // colors
     --font-color-dark: var(--marine-blue);
     --font-color-text: var(--cool-gray);
     --font-color-light: var(--white);
     --step-color: var(--light-blue);
+    --select-color: var(--light-gray);
+    --shadow-color: var(--light-gray);
     --main-background: var(--magnolia);
     --second-background: var(--alabaster);
 
