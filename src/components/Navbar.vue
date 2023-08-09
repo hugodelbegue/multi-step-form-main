@@ -33,6 +33,10 @@ import { RouterLink } from 'vue-router'
                     <span class="step_title">summary</span>
                 </div>
             </div>
+
+            <!-- à retirer à la fin -->
+            <RouterLink to="/thanks">END</RouterLink>
+
         </div>
     </nav>
 </template>

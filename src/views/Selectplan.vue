@@ -84,9 +84,7 @@ section {
   @media #{$tabletScreen} {
     flex-direction: column;
     place-items: flex-start;
-
-    // TODO adapter la taille au responsive
-    width: 150px;
+    width: 100%;
   }
 }
 

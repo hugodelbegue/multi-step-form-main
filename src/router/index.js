@@ -23,6 +23,13 @@ const router = createRouter({
       path: '/summary',
       name: 'summary',
       component: () => import('../views/Summary.vue')
+    },
+
+    // à retirer à la fin
+    {
+      path: '/thanks',
+      name: 'thanks',
+      component: () => import('../views/Thanks.vue')
     }
   ]
 })
