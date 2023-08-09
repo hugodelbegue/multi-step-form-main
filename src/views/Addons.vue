@@ -10,54 +10,52 @@ import IconCheckmark from '@/components/icons/IconCheckmark.vue'
                 <p class="description">Add-ons help enhance your gaming experience.</p>
             </div>
             <div class="wrapper_addons">
-                <div class="valid_options">
-                    <input type="checkbox" name="service" id="service" class="checkbox" checked>
-                    <label for="service" class="label_options">
-                        <div class="option">
-                            <div class="checkcube">
-                                <IconCheckmark class="checkmark" />
-                            </div>
-                            <div class="option_text">
-                                <div class="option_name">Online service</div>
-                                <div class="option_description">Access to multiplayer games</div>
-                            </div>
+                <input type="checkbox" name="service" id="service" class="checkbox" checked>
+                <label for="service" class="label_options">
+                    <div class="option">
+                        <div class="checkcube">
+                            <IconCheckmark class="checkmark" />
                         </div>
-                        <div class="option_price">+$1/mo</div>
-                    </label>
-                    <input type="checkbox" name="storage" id="storage" class="checkbox" checked>
-                    <label for="storage" class="label_options">
-                        <div class="option">
-                            <div class="checkcube">
-                                <IconCheckmark class="checkmark" />
-                            </div>
-                            <div class="option_text">
-                                <div class="option_name">Larger storage</div>
-                                <div class="option_description">Extra 1TB of cloud save</div>
-                            </div>
+                        <div class="option_text">
+                            <div class="option_name">Online service</div>
+                            <div class="option_description">Access to multiplayer games</div>
                         </div>
-                        <div class="option_price">+$2/mo</div>
-                    </label>
-                    <input type="checkbox" name="profile" id="profile" class="checkbox">
-                    <label for="profile" class="label_options">
-                        <div class="option">
-                            <div class="checkcube">
-                                <IconCheckmark class="checkmark" />
-                            </div>
-                            <div class="option_text">
-                                <div class="option_name">Customizable profile</div>
-                                <div class="option_description">Custom theme on your profile</div>
-                            </div>
+                    </div>
+                    <div class="option_price">+$1/mo</div>
+                </label>
+                <input type="checkbox" name="storage" id="storage" class="checkbox" checked>
+                <label for="storage" class="label_options">
+                    <div class="option">
+                        <div class="checkcube">
+                            <IconCheckmark class="checkmark" />
                         </div>
-                        <div class="option_price">+$2/mo</div>
-                    </label>
-                </div>
+                        <div class="option_text">
+                            <div class="option_name">Larger storage</div>
+                            <div class="option_description">Extra 1TB of cloud save</div>
+                        </div>
+                    </div>
+                    <div class="option_price">+$2/mo</div>
+                </label>
+                <input type="checkbox" name="profile" id="profile" class="checkbox">
+                <label for="profile" class="label_options">
+                    <div class="option">
+                        <div class="checkcube">
+                            <IconCheckmark class="checkmark" />
+                        </div>
+                        <div class="option_text">
+                            <div class="option_name">Customizable profile</div>
+                            <div class="option_description">Custom theme on your profile</div>
+                        </div>
+                    </div>
+                    <div class="option_price">+$2/mo</div>
+                </label>
             </div>
         </div>
     </section>
 </template>
 
 <style lang="scss" scoped>
-.valid_options {
+.wrapper_addons {
     display: flex;
     flex-direction: column;
     gap: var(--gap);
