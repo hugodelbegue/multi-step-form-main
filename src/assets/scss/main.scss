@@ -26,10 +26,10 @@ body {
 .wrapper_interface_content {
     display: flex;
     flex-direction: column;
-    gap: .7rem;
+    gap: calc(.7em * 2);
 
     @media #{$tabletScreen} {
-        gap: var(--gap);
+        gap: calc(1em * 2);
     }
 }
 
@@ -37,6 +37,10 @@ body {
     .title {
         margin-bottom: .3em;
         font-size: 1.9em;
+
+        @media #{$tabletScreen} {
+            margin-bottom: .1em;
+        }
     }
 
     .description {

@@ -15,6 +15,7 @@
     --mobile: 375px;
     --tablet: 720px;
     --desktop: 1120px;
+    // --desktop: 1440px;
     --gap: 1rem;
     --side-desktop: 1rem;
     --side-desktop-double: calc(var(--side-desktop) * 2);
@@ -23,6 +24,8 @@
     --corner: 12px;
     --corner-button: 5px;
     --body-side: max(var(--side), calc(50% - var(--mobile) / 2));
+
+    --time: 100ms;
 
     @media #{$tabletScreen} {
         --body-side: max(var(--side), calc(50% - var(--desktop) / 2));
@@ -34,6 +37,7 @@
     --font-color-light: var(--white);
     --step-color: var(--light-blue);
     --select-color: var(--light-gray);
+    --border-color: var(--purplish-blue);
     --shadow-color: var(--light-gray);
     --main-background: var(--magnolia);
     --second-background: var(--alabaster);
@@ -61,4 +65,9 @@
     list-style-type: none;
     outline: transparent !important;
     text-decoration: none;
+}
+
+input[type=checkbox],
+input[type=radio] {
+    display: none;
 }

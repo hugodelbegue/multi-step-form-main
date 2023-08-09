@@ -34,6 +34,10 @@
   flex-direction: column;
   margin-top: var(--gap);
 
+  &:first-child {
+    margin-top: 0;
+  }
+
   label {
     font-size: .9em;
   }

@@ -32,6 +32,8 @@ import SwitchStep from './components/SwitchStep.vue'
   flex-direction: column;
   place-content: space-between;
 
+  // min-height: 875px;
+
   @media #{$tabletScreen} {
     background-color: var(--second-background);
     height: auto;
@@ -47,7 +49,6 @@ import SwitchStep from './components/SwitchStep.vue'
   background-image: url(./assets/images/bg-sidebar-mobile.svg);
   background-size: cover;
   background-repeat: no-repeat;
-  padding: var(--side-desktop-double);
 
 
   @media #{$tabletScreen} {
@@ -56,6 +57,7 @@ import SwitchStep from './components/SwitchStep.vue'
     background-image: url(./assets/images/bg-sidebar-desktop.svg);
     background-color: var(--second-background);
     background-size: auto;
+    padding: var(--side-desktop-double);
 
     svg {
       width: auto;
@@ -92,7 +94,7 @@ import SwitchStep from './components/SwitchStep.vue'
 .interface {
   background-color: var(--second-background);
   border-radius: var(--corner);
-  padding: 2rem 1.5rem;
+  padding: 2rem 1.7rem;
   box-shadow: 0 10px 15px -10px var(--shadow-color);
 
   @media #{$tabletScreen} {
